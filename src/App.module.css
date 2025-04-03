@@ -1,0 +1,16 @@
+.wrapper{
+    max-width: 70rem;
+    margin: 2rem auto; /* 32pixels cima/baixo e auto nas laterais*/
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr; /* 256px é a largura da sidebar e 1fr é o espaço restante */
+    gap: 2rem;
+    align-items: flex-start; /* impede que o conteúdo da sidebar seja esticado para baixo */
+}
+
+@media (max-width: 768px){
+    .wrapper{
+        grid-template-columns: 1fr; /* caso a tela seja pequena, a sidebar fica no topo */
+    }
+}
